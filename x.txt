@@ -1,0 +1,1 @@
+nix build .#darwinConfigurations.system.jb-mba --extra-experimental-features "nix-command flakes" --impure --show-trace
