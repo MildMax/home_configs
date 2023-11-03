@@ -26,6 +26,42 @@
     remapCapsLockToControl = true;
   };
 
+  users.users.joeburns = {
+    shell = pkgs.zsh;
+    description = "Home user account";
+    home = "/Users/joeburns";
+  };
+
+  homebrew = {
+    enable = true;
+
+    onActivation = {
+      cleanup = "zap";
+      upgrade = true;
+    };
+
+    taps = [
+      "homebrew/cask"
+    ];
+
+    casks = [
+      "iterm2"
+      "obsidian"
+      "rectangle"
+      "slack"
+      "bitwarden"
+      "discord"
+      "utm"
+
+      "eloston-chromium"
+      "google-chrome"
+      "firefox"
+
+      "spotify"
+      "telegram-desktop"
+    ];
+  };
+
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
   # environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";

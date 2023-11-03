@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    applications/zsh.nix
   ];
 	
   programs.git = {
