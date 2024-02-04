@@ -21,11 +21,6 @@
     fonts = [ pkgs.meslo-lgs-nf ];
   };
 
-  system.keyboard = {
-    enableKeyMapping = true;
-    remapCapsLockToControl = true;
-  };
-
   users.users.joeburns = {
     shell = pkgs.zsh;
     description = "Home user account";
@@ -39,10 +34,6 @@
       cleanup = "zap";
       upgrade = true;
     };
-
-    taps = [
-      "homebrew/cask"
-    ];
 
     casks = [
       "iterm2"
